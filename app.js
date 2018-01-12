@@ -3,7 +3,7 @@ Vue.component('tag-input', {
         <div>
             <span v-for="tag in tags">
                 {{ tag }}
-                <span @click="del(tag)">x</span>
+                <span @click="del(tag)" class="close">(x)</span>
             </span>
             <input type="text" ref="test" v-model="input" @keydown.tab.prevent="add" @keydown.enter.prevent="add">
         </div>
